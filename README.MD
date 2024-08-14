@@ -9,3 +9,10 @@
 -gitignore: các file ngoại lệ không đẩy lên git
 -pom.xml: lưu các thông tin của project, tương tự package.json
 file pom được maven dùng để xử lý project
+# 3: Kiến trúc của spring framework
+-Web (mvc)
+-ORM (data access)
+-Core container:
+spring bean: 1 bản sao class được quản lý bởi core container
+Với mỗi file .java đã tạo sẽ đóng gói các class nó sử dụng vào 1 bean
+Mặc định, component scan sẽ quét các beans nằm ngang hoặc dưới cấp của main
