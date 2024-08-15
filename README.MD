@@ -16,3 +16,5 @@ file pom được maven dùng để xử lý project
 spring bean: 1 bản sao class được quản lý bởi core container
 Với mỗi file .java đã tạo sẽ đóng gói các class nó sử dụng vào 1 bean
 Mặc định, component scan sẽ quét các beans nằm ngang hoặc dưới cấp của main
+# 4:Spring boot devtools
+-nhằm mục đích khi lưu code không cần phải refresh lại project như trong #1
