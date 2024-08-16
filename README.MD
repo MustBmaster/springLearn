@@ -18,10 +18,14 @@ Với mỗi file .java đã tạo sẽ đóng gói các class nó sử dụng v�
 Mặc định, component scan sẽ quét các beans nằm ngang hoặc dưới cấp của main
 # 4:Spring boot devtools
 -nhằm mục đích khi lưu code không cần phải refresh lại project như trong #1
-# 5 :Setup kết nối mySql
+# 5:Setup kết nối mySql
 -khi generate project có thể vào start.spring.io để gen ra project và chọn các dependency phù hợp cho nó, còn không thì sẽ làm thủ công như trong commit #5
 -Các bước thục hiện bao gồm
     +Cài thêm dependency
     +Cài mysql + tạo schema mới
     +Cấu hình kết nối tới mysql trong file application.propeties
 !! 1 lưu ý cho commit này: đổi file propeties sang yml, vì yml có cách viết và trình bày tốt hơn, như bên trong commit có thể thấy các phần đã comment cũ đối với file propeties có nội dung tương tự. Spring có thể nhận diện cả 2 loại file cấu hình này
+# 6:Các khái niệm về security
+-Authentication: là quá trình định danh, xem 1 user có đúng là được registered trên hệ thống không, cái
+-Authorization: xác định cái quyền của 1 thg user khi dùng hệ thống nó được làm gì
+-khi cài dependency security, nó sẽ sử dụng 1 cái fillterChain để lọc ra các thông tin của request để xem xét hợp lệ
