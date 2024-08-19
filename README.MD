@@ -30,3 +30,9 @@ Mặc định, component scan sẽ quét các beans nằm ngang hoặc dưới c
 -Authorization: xác định cái quyền của 1 thg user khi dùng hệ thống nó được làm gì
 -khi cài dependency security, nó sẽ sử dụng 1 cái fillterChain để lọc ra các thông tin của request để xem xét hợp lệ
 # 7:Về mô hình MVC
+-V: view ở FE, render ra giao diện các thứ
+-M: các đối tượng được hệ thống mô hình hóa. Với spring thì nó là table ở DB
+-C: nó sẽ sử lý các dữ liệu của model để gửi qua view, trung chuyển dữ liệu
+# 8:Annotation của java
+-giải thích đơn gian: là 1 cái chú thích của framework, nhưng nó sẽ tăng cường chức năng của 1 class
+-ví dụ như trong commmit 7+8 này sẽ có các annotation tường ứng đối với service và conntroller. Khởi tạo userService dùng @sevice, và inject nó vào trong UserController
