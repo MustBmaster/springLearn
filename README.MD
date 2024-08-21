@@ -36,3 +36,9 @@ Mặc định, component scan sẽ quét các beans nằm ngang hoặc dưới c
 # 8:Annotation của java
 -giải thích đơn gian: là 1 cái chú thích của framework, nhưng nó sẽ tăng cường chức năng của 1 class
 -ví dụ như trong commmit 7+8 này sẽ có các annotation tường ứng đối với service và conntroller. Khởi tạo userService dùng @sevice, và inject nó vào trong UserController
+# 9:view engine:
+-nó là giao diện ở BE, (chỉ dùng cái này cho project này thôi, còn thông thường BE sẽ chỉ nhả ra API và kiểm soát với controller các thứ thôi)
+-trong file cấu hình yml, có 2 cấu hình vừa thêm cần phải giải thích:
+    +prefix: nó sẽ lần giao diện mvc bên trong webapp/[đường dẫn trong cấu hình]
+    +suffix: nó sẽ lần theo đuôi file dạng gì để render giao diện
+-trong project này sử dụng mvc jsp để render giao diện, tuy nhiên có nhiều công cụ khác có thể xem thêm. Mỗi công cụ sẽ có 1 syntax riêng

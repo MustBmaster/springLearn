@@ -7,10 +7,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @RestController
     public class HellowordController {
-    @GetMapping("/")
-    public String index() {
-        return "Hello World from Spring Boot!, this is the 2nd time i save without restarting";
-    }
+    // @GetMapping("/")
+    // public String index() {
+    //     return "Hello World from Spring Boot!, this is the 2nd time i save without restarting";
+    // }
     // khởi tạo 2 routes mới
     @GetMapping("/user")
     public String userPage() {

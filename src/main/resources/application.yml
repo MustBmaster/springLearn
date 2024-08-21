@@ -19,3 +19,7 @@ spring:
     user:
       name: minhnv1
       password: 437430
+  mvc:
+    view:
+      prefix: /views/
+      suffix: .jsp
