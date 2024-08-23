@@ -42,3 +42,9 @@ Mặc định, component scan sẽ quét các beans nằm ngang hoặc dưới c
     +prefix: nó sẽ lần giao diện mvc bên trong webapp/[đường dẫn trong cấu hình]
     +suffix: nó sẽ lần theo đuôi file dạng gì để render giao diện
 -trong project này sử dụng mvc jsp để render giao diện, tuy nhiên có nhiều công cụ khác có thể xem thêm. Mỗi công cụ sẽ có 1 syntax riêng
+# 10: Entity
+-@Entity: anotation này ở trong song.java sẽ định nghĩa 1 thực thể, và khi khai báo nó sẽ tạo ra 1 bảng trong database được setup tương ứng trong kết nối
+-@ID: anotation này sẽ khai báo trường id của 1 thuộc tính trong bảng
+-@Table: anotation này sẽ khai báo rõ tên của bảng cần thêm, nhưng nên thống nhất tên entity với tên đối tượng
+-Ngoài ra chi tiết hơn thì đọc doc hoặc note trong các file được commit
+
