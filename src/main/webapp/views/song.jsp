@@ -1,6 +1,4 @@
-<%@page contentType="text/html" pageEncoding="UTF-8" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,30 +13,30 @@ rel="stylesheet">
 </head>
 <body>
     <h1>create song</h1>
-    <form:form action="/song/post" method="post" modelAttribute="newSong">
+    <form action="/song/post" method="post" modelAttribute="newSong">
         <div class="container-fluid">
             <div class="mb-3">
                 <label>Song id</label>
-                <form:input type="text" class="form-control"/>
+                <input type="text" class="form-control"/>
             </div>
             <div class="mb-3">
                 <label>Song title</label>
-                <form:input type="text" class="form-control"/>
+                <input type="text" class="form-control"/>
             </div>
             <div class="mb-3">
                 <label>Song link</label>
-                <form:input type="text" class="form-control"/>
+                <input type="text" class="form-control"/>
             </div>
             <div class="mb-3">
                 <label>Song author</label>
-                <form:input type="text" class="form-control">
+                <input type="text" class="form-control">
             </div>
             <div class="mb-3">
                 <label>Song desc</label>
-                <form:textarea type="textarea" class="form-control"></textarea>
+                <textarea type="textarea" class="form-control"></textarea>
             </div>
             <button type="submit"  class="btn btn-primary">test form</button>
         </div>
-    </form:form>
+    </form>
 </body>
 </html>

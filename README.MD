@@ -47,4 +47,9 @@ Mặc định, component scan sẽ quét các beans nằm ngang hoặc dưới c
 -@ID: anotation này sẽ khai báo trường id của 1 thuộc tính trong bảng
 -@Table: anotation này sẽ khai báo rõ tên của bảng cần thêm, nhưng nên thống nhất tên entity với tên đối tượng
 -Ngoài ra chi tiết hơn thì đọc doc hoặc note trong các file được commit
-
+# 11: Mô tả repository và luồng chạy
+-repository nó là 1 cái interface để khai báo ra các phương thức mà nó sẽ chọc xuống db để thực hiện
+-Service sẽ sử dụng repo để gọi tới 1 phương thức được khai báo trong đó
+-Controller sẽ sử dụng Service để thao tác với dữ liệu và thực hiện các hành động
+-[23:52, 23/8/2024] Anh Thịnh Bếu-VTS: repository k nhất thiết phải gọi từ service và controller cũng k nhất thiết gọi service, làm thế cho nó chuẩn convention thôi
+-Khai báo các method sử dụng trong repo (nên tìm hiểu về thư viện JpaRepo để biết thêm)
