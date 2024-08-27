@@ -26,4 +26,12 @@ public class SongService {
     public List<Song> getAllSongByArtist(String author) {
         return this.songRepository.findByAuthor(author);
     }
+
+    public Song getSongById(long id) {
+        return this.songRepository.findById(id);
+    }
+
+    public void deleteSongById(long id) {
+        this.songRepository.deleteById(id);
+    }
 }
