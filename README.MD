@@ -52,4 +52,9 @@ Mặc định, component scan sẽ quét các beans nằm ngang hoặc dưới c
 -Service sẽ sử dụng repo để gọi tới 1 phương thức được khai báo trong đó
 -Controller sẽ sử dụng Service để thao tác với dữ liệu và thực hiện các hành động
 -[23:52, 23/8/2024] Anh Thịnh Bếu-VTS: repository k nhất thiết phải gọi từ service và controller cũng k nhất thiết gọi service, làm thế cho nó chuẩn convention thôi
--Khai báo các method sử dụng trong repo (nên tìm hiểu về thư viện JpaRepo để biết thêm)
+-Khai báo các method sử dụng trong repo (nên tìm hiểu về thư viện JpaRepo để biết thêm)\
+# 12: Các mối quan hệ Relationship
+-Đối với mỗi quan hệ 1 nhiều, cần có thực thể phải cấu hình:
++ở thực thể phía nhiều (như trong code, 1 uploader có thể up nhiều bài hát), thì sử dụng anotation @OneToMany(mappedBy = "[tên trường dược khai báo phía 1 cho khóa ngoại]") và khai báo thêm 1 thuộc tính kiểu mảng của thuộc tính phía 1
++ở thực thể phía 1(1 bài hát chỉ có 1 uploader => có khóa ngoại) thì sử dụng anotation @ManyToOne, @JoinColumn(name="[tên khóa ngoại]") và khai báo 1 thuộc tính kiểu của phía 1
+-Đối với quan hệ N-N (nhằm hạn chế tự động tạo bảng), nên tách thành 2 quan hệ 1 nhiều, thay vì sử dụng anotation @ManyToMany
