@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import vn.hoidanit.laptopshop.domain.Song;
 import vn.hoidanit.laptopshop.service.SongService;
+import org.springframework.web.bind.annotation.RequestBody;
 
 @Controller
 public class SongController {
@@ -27,7 +28,9 @@ public class SongController {
         List<Song> songs = songService.getAllSong();
         // System.out.println(songs);
         List<Song> songOfTee = songService.getAllSongByArtist("Justa Tee");
-        System.out.println(songOfTee);
+        // System.out.println(songOfTee);
+        Song songByID = songService.getSongById(1);
+        System.out.println(songByID);
         // return "song";
     }
 
@@ -41,7 +44,7 @@ public class SongController {
     @PostMapping("/song/update")
     public void updateSong(Song song) {
         // TODO: process POST request
-        Song thisSong = this.songService.getSongByID(song.getId());
+        Song thisSong = this.songService.getSongById(song.getId());
         if (thisSong != null) {
             thisSong.setTitle(song.getTitle());
             thisSong.setLink(song.getLink());
@@ -54,5 +57,10 @@ public class SongController {
         // return null;
     }
 
-
+    @PostMapping("/song/delete")
+    public void deleteSong(long id) {
+        // TODO: process POST request
+        this.songService.deleteSongById(id);
+        // return null;
+    }
 }

@@ -11,4 +11,6 @@ import vn.hoidanit.laptopshop.domain.Song;
 public interface SongRepository extends JpaRepository<Song, Long>{
     Song save(Song newSong);
     List<Song> findByAuthor(String author);
+    Song findById(long id);
+    void deleteById(long id);
 }

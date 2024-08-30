@@ -4,6 +4,10 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
+import java.util.List;
 
 @Entity
 public class Song {
@@ -14,6 +18,14 @@ public class Song {
     private String link;
     private String author;
     private String description;
+
+    @ManyToOne //anotation này để khai báo mối qua hệ)
+    @JoinColumn(name = "uploader_id") // anotation này để khai báo khóa ngoại
+    private Uploader uploader;
+
+    @OneToMany(mappedBy = "song")
+    private List<SongArtist> songArtists;
+
     //getters and setters
     public long getId() {
         return id;
@@ -50,7 +62,18 @@ public class Song {
         return "Song [id=" + id + ", title=" + title + ", link=" + link + ", author=" + author + ", description="
                 + description + "]";
     }
-    
-    
+    public Uploader getUploader() {
+        return uploader;
+    }
+    public void setUploader(Uploader uploader) {
+        this.uploader = uploader;
+    }
+    public List<SongArtist> getSongArtists() {
+        return songArtists;
+    }
+    public void setSongArtists(List<SongArtist> songArtists) {
+        this.songArtists = songArtists;
+    }
+
 
 }
